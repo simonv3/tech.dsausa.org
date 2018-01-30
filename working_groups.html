@@ -1,0 +1,29 @@
+---
+layout: default
+title: Working Groups
+permalink: /working_groups/index.html
+---
+
+<div class="news">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for working_group in site.working_groups limit:10%}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ working_group.url | prepend: site.baseurl }}">{{ working_group.title }}</a>
+        </h2>
+
+        <p>
+          {{ working_group.description }}
+        </p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p>
+    Want to make your own working group? Ask [us](form:todo) if it fits within the tech committee's purview.
+    If it does, then they'll set it up with it's own category and channels and a little blurb in here.
+  </p>
+  </div>
