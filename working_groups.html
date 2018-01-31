@@ -6,13 +6,13 @@ permalink: /working_groups/index.html
 
 <div class="news">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Working Groups</h1>
 
   <ul class="post-list">
     {% for working_group in site.working_groups limit:10%}
       <li>
         <h2>
-          <a class="post-link" href="{{ working_group.url | prepend: site.baseurl }}">{{ working_group.title }}</a>
+          {{ working_group.title }}
         </h2>
 
         <p>

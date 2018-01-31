@@ -2,9 +2,10 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    border-bottom: 5px solid $brand-color;
+    background-color: $grey-color-light;
     min-height: 56px;
+    padding: 2rem 0;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -17,9 +18,17 @@
     margin-bottom: 0;
     float: left;
 
+    img {
+      max-height: 40px;
+    }
+
     &,
     &:visited {
         color: $grey-color-dark;
+    }
+
+    &:hover {
+      text-decoration: none;
     }
 }
 
@@ -32,13 +41,20 @@
     }
 
     .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
+      padding: 1rem .25rem;
+      border-bottom: 2px solid $grey-color;
+      color: $text-color;
+      line-height: $base-line-height;
 
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
+      &:hover {
+        border-bottom-color: $brand-color;
+        text-decoration: none;
+      }
+
+      // Gaps between nav items, but not on the first one
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
     }
 
     @include media-query($on-palm) {
@@ -156,13 +172,15 @@
     }
 }
 
-
-
 /**
  * Page content
  */
 .page-content {
     padding: $spacing-unit 0;
+
+    p {
+      max-width: $paragraph-width;
+    }
 }
 
 .page-heading {
@@ -188,8 +206,6 @@
     font-size: 24px;
 }
 
-
-
 /**
  * Posts
  */
@@ -208,6 +224,7 @@
 }
 
 .post-content {
+
     margin-bottom: $spacing-unit;
 
     h2 {

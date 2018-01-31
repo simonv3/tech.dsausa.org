@@ -5,6 +5,8 @@ description: > # this means to ignore newlines until "baseurl:"
   The DSA Tech Committee puts technology to work for the national DSA office and
   local chapters so that we can effectively organize and communicate online.
 baseurl: "" # the subpath of your site, e.g. /blog/
+footer_text: >
+  Made with ♥ by the DSA Tech Committee
 url: "http://tech.dsausa.org" # the base hostname & protocol for your site - used for feed.xml
 # twitter_username: jekyllrb
 # github_username:  jekyll
